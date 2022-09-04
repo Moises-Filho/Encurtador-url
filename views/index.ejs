@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/assets/style.css" rel="stylesheet" type="text/css"/>
+    <title>Encurtador de Url</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-1">
+            <h1> Encurtador de URL</h1>
+            <form action="/encurtarUrl" method="POST">
+                <label for="UrlCompleta"></label>
+                <input required placeholder="URL" type="url" name="urlCompleta" id="UrlCompleta">
+                <button class="btn" type="submit">Encurtar</button>
+            </form>  
+        </div>
+        </br>
+        <div class="card-2">
+            <table>
+                <thead>
+                    <tr>
+                        <th>URL Completa</th>
+                        <th>URL Encurtada</th>
+                        <th>Click</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% urlEncurtadas.forEach(urlEncurtada => { %>
+                        <tr>
+                            <td><a href="<%= urlEncurtada.completa %>"><%= urlEncurtada.completa %></a></td>
+                            <td><a href="<%= urlEncurtada.encurtada %>"><%= urlEncurtada.encurtada%></a></td>
+                            <td><%= urlEncurtada.clicks %></td>
+                        </tr>        
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+            </body>
+</html>

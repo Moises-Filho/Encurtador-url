@@ -1,0 +1,28 @@
+body{
+    background-color: aliceblue;
+    margin: 0;
+}
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+table{
+    border: 1px;
+    border-collapse: collapse;
+    background-color:rgb(225, 248, 92);
+    border-color: black;
+    border-style:solid;
+    width: 110%;
+}
+th{
+    background-color: #666;
+    color: #fff;
+}
+tr{
+    text-align: center;
+}
